@@ -1,18 +1,24 @@
 <template>
 <div class="topnav">
-    <div class="logo">
-
-    </div>
+    <span class="toggleAside" @click="toggleMenu"></span>
+    <div class="logo">LOGO</div>
     <ul class="menu">
         <li>菜单1</li>
         <li>菜单2</li>
     </ul>
 </div>
 </template>
-
 <script lang="ts">
+import { inject, Ref } from 'vue'
 export default {
-    name: "Topnav"
+    setup() {
+      const menuVisible = inject<Ref<boolean>>("menuVisible")  //get
+      const toggleMenu = () => {
+        menuVisible.value = !menuVisible.value;
+        console.log(menuVisible.value)
+      }
+      return {toggleMenu}
+    }
 }
 </script>
 
