@@ -11,7 +11,7 @@ export default {
     name: 'App',
     setup() {
         const width = document.documentElement.clientWidth;
-        const flag = width <= 500 ? true : false;
+        const flag = (width < 501 ? false : true);
         const menuVisible = ref(flag);
         provide("menuVisible", menuVisible); // set
         // 跳转之后判断
