@@ -1,6 +1,5 @@
 <template>
     <div>
-    iamswitch.vue
         <button :class="{checked: checked}" @click="toggle">
             <span></span>
         </button>
@@ -10,11 +9,17 @@
 import { ref } from 'vue'
 export default {
     name: "Switch",
-    setup() {
+    props: {
+        value: Boolean
+    },
+    setup(props, content) {
         const checked = ref(false);
         console.log(checked)
         const toggle = (() => {
             checked.value = !checked.value;
+            // 相当于Vue2中的this.$emit()方法
+            content.emit("update:value", !props.value);
+            
         })
         return {checked,toggle}
     }

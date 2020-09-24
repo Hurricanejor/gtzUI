@@ -1,12 +1,16 @@
 <template>
     <div>
-        <h1>I am switchDemo.vue</h1>
-        <Switch></Switch>
+        <Switch v-model:value="isOn"></Switch>
     </div>
 </template>
 <script lang="ts">
+import { ref } from 'vue'
 import Switch from '../lib/Switch.vue'
 export default {
-    components: { Switch }
+    components: { Switch },
+    setup(props) {
+        const isOn = ref(false);
+        return { isOn };
+    }
 }
 </script>
