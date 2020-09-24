@@ -1,5 +1,5 @@
 <template>
-    <div>
-        I am Button.vue
-    </div>
+   <button>
+        <slot></slot>
+   </button>
 </template>
