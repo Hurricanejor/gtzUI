@@ -1,13 +1,13 @@
 <template>
+  <h1>Button按钮</h1>
+  <p>基础组件，触发业务逻辑时使用。</p>
+  <h2>代码示例</h2>
   <div>
-    I am ButtonDemo.vue
-    <Button @click="onClick" theme="" size=""></Button>
-  </div>
-  <div>
-    <Button @click="onClick">你好</Button>
+  <h3>按钮类型</h3>
+    <Button @click="onClick">默认按钮</Button>
     <Button theme="button">你好</Button>
-    <Button theme="link">你好</Button>
-    <Button theme="text">你好</Button>
+    <Button theme="link">链接按钮</Button>
+    <Button theme="text">文字按钮</Button>
   </div>
   <h1>示例2</h1>
   <div>
