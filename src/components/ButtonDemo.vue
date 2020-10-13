@@ -1,5 +1,6 @@
 <template>
-  <h1>Button按钮</h1>
+  <article class="markdown-body">
+    <h1>Button按钮</h1>
   <p>基础组件，触发业务逻辑时使用。</p>
   <h2>代码示例</h2>
   <div>
@@ -56,6 +57,7 @@
     <Button loading>加载中</Button>
     <Button>加载完毕</Button>
   </div>
+  </article>
 </template>
 <script lang="ts">
 import Button from "../lib/Button.vue";
