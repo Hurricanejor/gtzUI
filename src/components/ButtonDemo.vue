@@ -1,6 +1,6 @@
 <template>
   <article class="markdown-body">
-    <h1>Button按钮</h1>
+   #Button按钮
   <p>基础组件，触发业务逻辑时使用。</p>
   <h2>代码示例</h2>
   <div>
