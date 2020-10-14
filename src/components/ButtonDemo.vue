@@ -1,6 +1,10 @@
 <template>
   <article class="markdown-body">
-   #Button按钮
+  <h2>#Button按钮</h2>
+  <div class="demo-code">
+    <pre class="language-html" v-html="Prism.highlight('<div></div>', Prism.languages.html, 'html')" />
+  </div>
+   
   <p>基础组件，触发业务逻辑时使用。</p>
   <h2>代码示例</h2>
   <div>
@@ -30,21 +34,21 @@
   </div>
   <h1>示例3</h1>
   <div>
-    <dir>
+    <div>
       <Button level="main">主要按钮</Button>
       <Button>普通按钮</Button>
       <Button level="danger">危险按钮</Button>
-    </dir>
-    <dir>
+    </div>
+    <div>
       <Button theme="link" level="main">主要链接按钮</Button>
       <Button theme="link">普通链接按钮</Button>
       <Button theme="link" level="danger">危险链接按钮</Button>
-    </dir>
-    <dir>
+    </div>
+    <div>
       <Button theme="text" level="main">主要文字按钮</Button>
       <Button theme="text">普通文字按钮</Button>
       <Button theme="text" level="danger">危险文字按钮</Button>
-    </dir>
+    </div>
   </div>
   <h1>示例4</h1>
   <div>
@@ -62,6 +66,10 @@
 <script lang="ts">
 import Button from "../lib/Button.vue";
 
+import 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css'
+
+const Prism = (window as any).Prism;
 export default {
   components: { Button },
   setup() {
@@ -69,7 +77,7 @@ export default {
       // 此时能输出，是因为VUE将事件直接传到了根元素上
       console.log("HI");
     };
-    return { onClick };
+    return { onClick, Prism };
   },
 };
 </script>

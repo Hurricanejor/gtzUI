@@ -6,7 +6,7 @@
             <h2>组件列表</h2>
             <ol>
                 <li>
-                    <router-link to="/doc/intro">Switch组件</router-link>
+                    <router-link to="/doc/intro">介绍</router-link>
                 </li>
                 <li>
                     <router-link to="/doc/switch">Switch组件</router-link>
@@ -58,6 +58,7 @@ export default {
   display: flex;
   > aside {
     flex-shrink: 0;
+    z-index: 9;
   }
   > main {
     flex-grow: 1;

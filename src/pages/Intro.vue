@@ -1,14 +1,22 @@
 <template>
-    <div class="markdown-body" v-html="md">
+    <div class="markdown-body">
         
     </div>
 </template>
-<script>
-import md from "../markdown/intro.md"
+<script lang="ts">
+// import md from "../markdown/intro.md"
+import 'prismjs'
+import 'prismjs/themes/prism.css'
+const Prism = (window as any).Prism;
 export default {
     data() {
         return {
-            md
+            // md
+        }
+    },
+    setup() {
+        return {
+            Prism
         }
     }
 }
