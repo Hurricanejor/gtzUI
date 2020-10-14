@@ -1,5 +1,6 @@
 import { h } from 'vue';
 import Markdown from './components/Markdown.vue';
+import Intro from './pages/Intro.vue';
 import intro from './markdown/intro.md';
 import { createWebHashHistory, createRouter } from 'vue-router';
 import Home from './pages/Home.vue';
@@ -19,7 +20,7 @@ export const router = createRouter({
             [
                 {path: "switch", component: SwitchDemo},
                 {path: "button", component: ButtonDemo},
-                {path: "intro", component: md(intro) }
+                {path: "intro", component: Intro }
             ]
         }
     ]

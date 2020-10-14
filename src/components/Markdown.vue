@@ -1,6 +1,5 @@
 <template>
-<article class="markdown-body" v-html="content">
-</article>
+  <article class="markdown-body" v-html="content"></article>
 </template>
 
 <script lang="ts">
@@ -9,9 +8,19 @@ import {
 } from 'vue'
 export default {
   props: {
-    content: {
+    path: {
       type: String,
       required: true
+    }
+  },
+  setup(props) {
+    const content = ref < string > (null);
+    // 异步引入markdown文档
+    import(props.path).then(result => {
+      content.value = result.default;
+    })
+    return {
+      content
     }
   }
 }
