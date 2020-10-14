@@ -8,7 +8,7 @@ import Doc from './pages/Doc.vue';
 import SwitchDemo from './components/SwitchDemo.vue';
 import ButtonDemo from './components/ButtonDemo.vue';
 
-const md = string => h(Markdown, { content: string, key: string })
+const md = filename => h(Markdown, { path: `../markdown/${filename}.md`, key: filename })
 const history = createWebHashHistory();
 export const router = createRouter({
     history,
@@ -20,7 +20,7 @@ export const router = createRouter({
             [
                 {path: "switch", component: SwitchDemo},
                 {path: "button", component: ButtonDemo},
-                {path: "intro", component: Intro }
+                {path: "intro", component: md("intro") }
             ]
         }
     ]
