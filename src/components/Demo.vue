@@ -5,13 +5,13 @@
             <component :is="componentName"></component>
         </div>
         <div class="demo-actions">
-            <Button>查看代码</Button>
+            <Button @click="codeVisible = !codeVisible">查看代码</Button>
         </div>
-        <div class="demo-code">
-        <pre class="language-html" v-html="html" />
+        <div class="demo-code" v-if="codeVisible">
+            <pre class="language-html" v-html="html" />
          <!--  
-         <pre></pre>  报错      ???
-         只能写成<pre />
+            <pre></pre>  报错      ???
+            只能写成<pre />
          <pre class="language-html" v-html="Prism.highlight(componentName.__sourceCode, Prism.languages.html, 'html')"></pre>
          
           --> 
@@ -24,9 +24,11 @@ import Button from "../lib/Button.vue";
 
 import 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 const Prism = (window as any).Prism;
+// 控制 查看代码 的开关不可写在此处，此处会造成全局控制
+// const codeVisible = ref(false);
 export default {
     components: { Button },
     props: {
@@ -37,9 +39,11 @@ export default {
             return Prism.highlight(props.componentName.__sourceCode, Prism.languages.html, 'html')
         });
         
+        const codeVisible = ref(false);
         return {
             Prism,
-            html
+            html,
+            codeVisible
         }
     }
 }
