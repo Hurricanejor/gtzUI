@@ -1,7 +1,8 @@
+<demo>
+disabled
+</demo>
 <template>
-    <div class="demo">
         <Switch v-model:value="isOn" disabled />
-    </div>
 </template>
 <script lang="ts">
 import { ref } from "vue"
