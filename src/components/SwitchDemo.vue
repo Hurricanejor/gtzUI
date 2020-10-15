@@ -4,13 +4,13 @@
     <div class="demo">
       <h2>常规用法</h2>
       <div class="demo-component">
-        <Switch v-model:value="isOn" />
+        <Switch1Demo></Switch1Demo>
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
       </div>
       <div class="demo-code">
-        <pre>&lt;Switch v-model:value="isOn" /&gt;</pre>
+        <pre class="language-html" v-html="Prism.highlight(Switch1Demo.__sourceCode, Prism.languages.html, 'html')"></pre>
       </div>
     </div>
     <div class="demo">
@@ -25,18 +25,24 @@
         <pre>&lt;Switch v-model:value="isOn" disabled /&gt;</pre>
       </div>
     </div>
-    <Switch v-model:value="isOn"></Switch>
   </div>
 </template>
 <script lang="ts">
 import { ref } from "vue";
 import Switch from "../lib/Switch.vue";
 import Button from "../lib/Button.vue"
+import Switch1Demo from "./Switch/Switch1.demo.vue";
+import Switch2Demo from "./Switch/Switch2.demo.vue";
+
+import 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css'
+
+const Prism = (window as any).Prism;
 export default {
-  components: { Switch,Button },
+  components: { Switch,Button,Switch1Demo,Switch2Demo },
   setup(props) {
     const isOn = ref(false);
-    return { isOn };
+    return { isOn,Switch1Demo,Prism };
   },
 };
 </script>

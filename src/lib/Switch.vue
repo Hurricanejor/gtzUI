@@ -14,7 +14,6 @@ export default {
     },
     setup(props, content) {
         const checked = ref(false);
-        console.log(checked)
         const toggle = (() => {
             checked.value = !checked.value;
             // 相当于Vue2中的this.$emit()方法
