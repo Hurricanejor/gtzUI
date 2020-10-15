@@ -4,7 +4,7 @@
     <div class="demo">
       <h2>常规用法</h2>
       <div class="demo-component">
-        <Switch1Demo></Switch1Demo>
+        <component :is="Switch1Demo"></component>
       </div>
       <div class="demo-actions">
         <Button>查看代码</Button>
@@ -39,10 +39,10 @@ import 'prismjs/themes/prism-tomorrow.css'
 
 const Prism = (window as any).Prism;
 export default {
-  components: { Switch,Button,Switch1Demo,Switch2Demo },
+  components: { Switch,Button },
   setup(props) {
     const isOn = ref(false);
-    return { isOn,Switch1Demo,Prism };
+    return { isOn,Switch1Demo,Switch2Demo,Prism };
   },
 };
 </script>
