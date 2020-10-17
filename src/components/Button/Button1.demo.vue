@@ -1,0 +1,27 @@
+<demo>
+    按钮类型
+</demo>
+<template>
+    <Button @click="onClick">默认按钮</Button>
+    <Button theme="button">你好</Button>
+    <Button theme="link">链接按钮</Button>
+    <Button theme="text">文字按钮</Button>
+</template>
+
+<script lang="ts">
+import Vue from 'vue';
+import Button from '../../lib/Button.vue';
+export default ({
+    components: {
+        Button
+    },
+    setup(props) {
+        const onClick = () => {
+            console.log(`HI`);
+        }
+        return {
+            onClick
+        }
+    }
+})
+</script>
