@@ -1,7 +1,7 @@
 <template>
 <div class="topnav">
     <span class="toggleAside" @click="toggleMenu"></span>
-    <div class="logo">LOGO</div>
+    <div class="logo"><h2>GtzUI</h2></div>
     <ul class="menu">
         <li>菜单1</li>
         <li>菜单2</li>
@@ -47,9 +47,11 @@ export default {
     }
   }
   > .toggleAside {
-    width: 24px;
-    height: 24px;
-    background: red;
+    width: 35px;
+    height: 35px;
+    background: url("../assets/gtz-logo-blue.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
     position: absolute;
     left: 16px;
     top: 50%;
