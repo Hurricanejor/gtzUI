@@ -23,7 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
-  background: pink;
+  background-color: #ffffff;
   display: flex;
   padding: 16px;
   position: fixed;
@@ -33,6 +33,7 @@ export default {
   z-index: 10;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid #dcdcdc;
   > .logo {
     max-width: 6em;
     margin-right: auto;

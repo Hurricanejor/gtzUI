@@ -3,7 +3,7 @@
     <Topnav class="nav" />
     <div class="content">
         <aside v-if="menuVisible">
-            <h2>组件列表</h2>
+            <h2>开始</h2>
             <ol>
                 <li>
                     <router-link to="/doc/intro">介绍</router-link>
@@ -11,6 +11,9 @@
                 <li>
                     <router-link to="/doc/install">安装</router-link>
                 </li>
+            </ol>
+            <h2>组件列表</h2>
+            <ol>
                 <li>
                     <router-link to="/doc/switch">Switch组件</router-link>
                 </li>
@@ -70,7 +73,7 @@ export default {
   }
 }
 aside {
-  background: lightblue;
+  background: #ffffff;
   width: 150px;
   padding: 16px;
   position: fixed;
@@ -78,6 +81,7 @@ aside {
   left: 0;
   padding-top: 70px;
   height: 100%;
+  border-right: 1px solid #dcdcdc;
   > h2 {
     margin-bottom: 4px;
   }
