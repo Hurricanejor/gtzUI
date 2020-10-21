@@ -14,12 +14,14 @@ export const router = createRouter({
         { path: "/", component: Home },
         { 
             path: "/doc", 
-            component: Doc, children: 
+            component: Doc, 
+            children: 
             [
                 {path: "switch", component: SwitchDemo},
                 {path: "button", component: ButtonDemo},
                 {path: "intro", component: md("intro") },
-                {path: "install", component: md("install") }
+                {path: "install", component: md("install") },
+                {path: "note1", component: md("note1") }
             ]
         }
     ]

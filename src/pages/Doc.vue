@@ -21,6 +21,15 @@
                     <router-link to="/doc/button">Button组件</router-link>
                 </li>
             </ol>
+            <h2>文档</h2>
+            <ol>
+                <li>
+                    <router-link to="/doc/note1">项目搭建</router-link>
+                </li>
+                <li>
+                    <router-link to="/doc/button">Button组件</router-link>
+                </li>
+            </ol>
         </aside>
         <main>
           <router-view></router-view>
@@ -32,6 +41,10 @@
 <script lang="ts">
 import Topnav from '../components/TopNav.vue'
 import { inject, Ref } from 'vue'
+
+import 'prismjs'
+import 'prismjs/themes/prism-tomorrow.css'
+
 export default {
     name: 'Doc',
     components: {
