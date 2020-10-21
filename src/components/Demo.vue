@@ -41,7 +41,6 @@ export default {
         
         const codeVisible = ref(false);
         return {
-            Prism,
             html,
             codeVisible
         }
