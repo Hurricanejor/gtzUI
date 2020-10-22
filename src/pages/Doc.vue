@@ -3,7 +3,7 @@
     <Topnav class="nav" />
     <div class="content">
         <aside v-if="menuVisible">
-            <h2>开始</h2>
+            <h3>开始</h3>
             <ol>
                 <li>
                     <router-link to="/doc/intro">介绍</router-link>
@@ -12,7 +12,7 @@
                     <router-link to="/doc/install">安装</router-link>
                 </li>
             </ol>
-            <h2>组件列表</h2>
+            <h3>组件列表</h3>
             <ol>
                 <li>
                     <router-link to="/doc/switch">Switch组件</router-link>
@@ -21,13 +21,10 @@
                     <router-link to="/doc/button">Button组件</router-link>
                 </li>
             </ol>
-            <h2>文档</h2>
+            <h3>文档</h3>
             <ol>
                 <li>
                     <router-link to="/doc/note1">项目搭建</router-link>
-                </li>
-                <li>
-                    <router-link to="/doc/button">Button组件</router-link>
                 </li>
             </ol>
         </aside>
@@ -78,6 +75,8 @@ export default {
   > aside {
     flex-shrink: 0;
     z-index: 9;
+    padding-left: 0;
+    padding-right: 0;
   }
   > main {
     flex-grow: 1;
@@ -95,12 +94,33 @@ aside {
   padding-top: 70px;
   height: 100%;
   border-right: 1px solid #dcdcdc;
-  > h2 {
-    margin-bottom: 4px;
+  
+  > h3 {
+    margin: 4px 0 4px 10px;
   }
   > ol {
     > li {
       padding: 4px 0;
+
+      > a {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 30px;
+        width: 100%;
+        line-height: 30px;
+        padding-left: 20px;
+        &:hover {
+          &::after{
+            content: " ⬅";
+          }
+        }
+      }
+      
+      > .router-link-active {
+        border-left: 4px solid #000;
+        // font-weight: bold;
+        padding-left: 16px;
+      }
     }
   }
 }
