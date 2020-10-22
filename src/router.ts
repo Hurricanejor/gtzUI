@@ -17,6 +17,7 @@ export const router = createRouter({
             component: Doc, 
             children: 
             [
+                {path: "", component: md("intro") },
                 {path: "switch", component: SwitchDemo},
                 {path: "button", component: ButtonDemo},
                 {path: "intro", component: md("intro") },
