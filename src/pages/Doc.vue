@@ -2,29 +2,29 @@
 <div class="layout">
     <Topnav class="nav" />
     <div class="content">
-        <aside v-if="menuVisible">
+        <aside v-if="phoneMenuVisible">
             <h3>开始</h3>
             <ol>
                 <li>
-                    <router-link to="/doc/intro">介绍</router-link>
+                    <router-link @click="phoneToggleMenu" to="/doc/intro">介绍</router-link>
                 </li>
                 <li>
-                    <router-link to="/doc/install">安装</router-link>
+                    <router-link @click="phoneToggleMenu" to="/doc/install">安装</router-link>
                 </li>
             </ol>
             <h3>组件列表</h3>
             <ol>
                 <li>
-                    <router-link to="/doc/switch">Switch组件</router-link>
+                    <router-link @click="phoneToggleMenu" to="/doc/switch">Switch组件</router-link>
                 </li>
                 <li>
-                    <router-link to="/doc/button">Button组件</router-link>
+                    <router-link @click="phoneToggleMenu" to="/doc/button">Button组件</router-link>
                 </li>
             </ol>
             <h3>文档</h3>
             <ol>
                 <li>
-                    <router-link to="/doc/note1">项目搭建</router-link>
+                    <router-link @click="phoneToggleMenu" to="/doc/note1">项目搭建</router-link>
                 </li>
             </ol>
         </aside>
@@ -37,7 +37,7 @@
 
 <script lang="ts">
 import Topnav from '../components/TopNav.vue'
-import { inject, Ref } from 'vue'
+import { computed, inject, ref, Ref } from 'vue'
 
 import 'prismjs'
 import 'prismjs/themes/prism-tomorrow.css'
@@ -49,7 +49,21 @@ export default {
     },
     setup() {
       const menuVisible = inject<Ref<boolean>>("menuVisible")  //get
-      return { menuVisible }
+      const isClick = inject<Ref<boolean>>("isClick")  //get
+      /* 
+        1.PC端：永久显示 menuVisible
+        2.移动端：初始 不显示，点击logo触发显示  isClick
+                 点击li 不显示
+                 点击除了aside外的都 不显示
+       */
+        
+       let phoneMenuVisible = computed(() => {
+         return menuVisible.value ? menuVisible.value : isClick.value;
+       })
+       const phoneToggleMenu = () => {
+         isClick.value = !isClick.value;
+       }
+      return { menuVisible, isClick, phoneMenuVisible, phoneToggleMenu }
     }
 }
 </script>

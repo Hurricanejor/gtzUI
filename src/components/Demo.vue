@@ -5,10 +5,11 @@
             <component :is="componentName"></component>
         </div>
         <div class="demo-actions">
-            <Button @click="codeVisible = !codeVisible">查看代码</Button>
+            <Button @click="codeVisible = !codeVisible">{{ codeVisible ? "收起" : "查看代码" }}</Button>
+            <Button v-if="codeVisible" @click="">复制代码</Button>
         </div>
         <div class="demo-code" v-if="codeVisible">
-            <pre class="language-html" v-html="html" />
+            <pre class="line-numbers language-html" v-html="html" />
          <!--  
             <pre></pre>  报错      ???
             只能写成<pre />
