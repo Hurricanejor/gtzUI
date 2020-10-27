@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$mainColor: #31588a;
 .topnav {
   background-color: #ffffff;
   display: flex;
@@ -46,6 +47,7 @@ export default {
     flex-wrap: nowrap;
     > li {
       margin: 0 1em;
+      color: $mainColor;
     }
   }
   > .toggleAside {

@@ -56,7 +56,7 @@ $border-color: #d9d9d9;
     padding: 10px;
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 1px 8px 20px #ebedf0;
+    box-shadow: 1px 5px 20px #ebedf0;
   >h2 {
     font-size: 20px;
     padding: 8px 16px;

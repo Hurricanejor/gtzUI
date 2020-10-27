@@ -28,7 +28,7 @@ export default {
 $h: 22px;
 $h2: $h - 4px;
 $disbc:  #bfbfbf;
-$combc: #1890ff;
+$combc: #31588a;
 .gtz-button {
   height: $h; width: $h * 2; border: none; background: $disbc; border-radius: $h/2; position: relative;
   > span {

@@ -21,9 +21,7 @@
     app.mount("#app)
 ```
 
-
-
-### 点击切换aside  
+### 点击切换aside
 
 点击显示，再次点击隐藏
 需要用到：`provide/inject`

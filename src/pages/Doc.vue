@@ -98,6 +98,10 @@ $mainColor: #31588a;
     flex-grow: 1;
     padding: 16px;
     padding-top: 15px;
+    >h3 {
+      height: 60px;
+      line-height: 60px;
+    }
   }
 }
 aside {
@@ -112,11 +116,11 @@ aside {
   border-right: 1px solid #dcdcdc;
   
   > h3 {
-    margin: 4px 0 4px 10px;
+    margin: 5px 0 0 10px;
     font-size: 16px;
     font-weight: bold;
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
   }
   > ol {
     > li {

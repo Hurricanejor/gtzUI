@@ -30,11 +30,14 @@ export default {
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
-$blue: #40a9ff;
+$blue: #31588a;
 $radius: 4px;
 $red: red;
 $grey: grey;
 .gtzui-button {
+  // background: $blue;
+  //   border-color: $blue;
+  //   color: white;
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -92,6 +95,9 @@ $grey: grey;
     padding: 0 4px;
   }
   &.gtzui-theme-button {
+    background: $blue;
+    border-color: $blue;
+    color: white;
     &.gtzui-level-main {
       background: $blue;
       color: white;
