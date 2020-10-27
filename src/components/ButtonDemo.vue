@@ -3,7 +3,6 @@
     <h2>Button按钮</h2>
     
     <p>基础组件，触发业务逻辑时使用。</p>
-    <h2>代码示例</h2>
     <Demo :componentName="Button1Demo"></Demo>
     <Demo :componentName="Button2Demo"></Demo>
     <Demo :componentName="Button3Demo"></Demo>

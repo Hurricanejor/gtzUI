@@ -68,6 +68,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+$mainColor: #31588a;
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -111,6 +113,8 @@ aside {
   
   > h3 {
     margin: 4px 0 4px 10px;
+    font-size: 16px;
+    font-weight: bold;
   }
   > ol {
     > li {
@@ -125,21 +129,40 @@ aside {
         padding-left: 20px;
         font-size: 14px;
         &:hover {
+          
+        background: rgba(236, 242, 252, .5);
           &::after{
-            content: " ⬅";
           }
         }
       }
       
-      > .router-link-active {
-        border-left: 4px solid #000;
-        // font-weight: bold;
+      > a.router-link-active {
+        color: $mainColor;
+        background: rgba(236, 242, 252, .5);
         padding-left: 16px;
+        position: relative;
+        &::after{
+            box-shadow: 1px 0 12px 0$mainColor;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background:$mainColor;
+            -moz-border-radius-topright: 4px;
+            border-top-right-radius: 4px;
+            -moz-border-radius-bottomright: 4px;
+            border-bottom-right-radius: 4px;
+            -webkit-box-shadow: 1px 0 12px 0 $mainColor;
+            -moz-box-shadow: 1px 0 12px 0 $mainColor;
+          }
       }
     }
   }
 }
 main {
   overflow: auto;
+  
 }
 </style>
