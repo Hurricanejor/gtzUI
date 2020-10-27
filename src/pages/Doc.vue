@@ -97,7 +97,7 @@ $mainColor: #31588a;
   > main {
     flex-grow: 1;
     padding: 16px;
-    padding-top: 30px;
+    padding-top: 15px;
   }
 }
 aside {
@@ -115,17 +115,17 @@ aside {
     margin: 4px 0 4px 10px;
     font-size: 16px;
     font-weight: bold;
+    height: 50px;
+    line-height: 50px;
   }
   > ol {
     > li {
-      padding: 4px 0;
 
       > a {
         display: inline-block;
         box-sizing: border-box;
-        height: 30px;
         width: 100%;
-        line-height: 30px;
+        line-height: 40px;
         padding-left: 20px;
         font-size: 14px;
         &:hover {
@@ -139,7 +139,7 @@ aside {
       > a.router-link-active {
         color: $mainColor;
         background: rgba(236, 242, 252, .5);
-        padding-left: 16px;
+        // padding-left: 16px;
         position: relative;
         &::after{
             box-shadow: 1px 0 12px 0$mainColor;
