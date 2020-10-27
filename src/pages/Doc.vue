@@ -123,6 +123,7 @@ aside {
         width: 100%;
         line-height: 30px;
         padding-left: 20px;
+        font-size: 14px;
         &:hover {
           &::after{
             content: " ⬅";

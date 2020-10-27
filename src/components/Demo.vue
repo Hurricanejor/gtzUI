@@ -5,7 +5,7 @@
             <component :is="componentName"></component>
         </div>
         <div class="demo-actions">
-            <Button @click="codeVisible = !codeVisible">{{ codeVisible ? "收起" : "查看代码" }}</Button>
+            <Button @click="codeVisible = !codeVisible">{{ codeVisible ? "隐藏代码" : "查看代码" }}</Button>
             <Button v-if="codeVisible" @click="">复制代码</Button>
         </div>
         <div class="demo-code" v-if="codeVisible">
@@ -53,13 +53,13 @@ export default {
 $border-color: #d9d9d9;
 .demo {
   border: 1px solid $border-color;
-  margin: 16px 0 32px;
-  border-radius: 5px;
-  box-shadow: 0px 5px 20px #dcdcdc;
+  // margin: 16px 0 32px;
+  // border-radius: 5px;
+  // box-shadow: 0px 5px 20px #dcdcdc;
   >h2 {
     font-size: 20px;
     padding: 8px 16px;
-    border-bottom: 1px solid $border-color;
+    // border-bottom: 1px solid $border-color;
   }
   &-component {
     padding: 16px;
