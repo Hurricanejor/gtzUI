@@ -1,6 +1,6 @@
 <template>
   <div class="markdown-body">
-    <h3>Switch 组件示例</h3>
+    <h2>Switch 组件示例</h2>
     <Demo :componentName="Switch1Demo"></Demo>
     <Demo :componentName="Switch2Demo"></Demo>
   </div>

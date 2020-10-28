@@ -7,7 +7,7 @@
               </div>
               <div class="demo-actions">
                   <Button @click="codeVisible = !codeVisible">{{ codeVisible ? "隐藏代码" : "查看代码" }}</Button>
-                  <Button v-if="codeVisible" @click="">复制代码</Button>
+                  <Button v-if="codeVisible" @click="copyCode">复制代码</Button>
               </div>
               <div class="demo-code" v-if="codeVisible">
                   <pre class="line-numbers language-html" v-html="html" />
@@ -41,11 +41,14 @@ export default {
         const html = computed(() => { 
             return Prism.highlight(props.componentName.__sourceCode, Prism.languages.html, 'html')
         });
-        
+        const copyCode = function() {
+
+        }
         const codeVisible = ref(false);
         return {
             html,
-            codeVisible
+            codeVisible,
+            copyCode
         }
     }
 }

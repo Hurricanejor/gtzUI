@@ -20,6 +20,9 @@
                 <li>
                     <router-link @click="phoneToggleMenu" to="/doc/button">Button组件</router-link>
                 </li>
+                <li>
+                    <router-link @click="phoneToggleMenu" to="/doc/Modal">Modal组件</router-link>
+                </li>
             </ol>
             <h3>文档</h3>
             <ol>

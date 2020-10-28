@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="markdown-body">
     <h2>Button按钮</h2>
     <p>基础组件，触发业务逻辑时使用。</p>
     <Demo :componentName="Button1Demo"></Demo>
