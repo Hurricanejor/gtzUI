@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <button class="gtz-button" :class="{'gtz-checked': checked}" @click="toggle">
-            <span></span>
-        </button>
-    </div>
+    <button class="gtz-button" :class="{'gtz-checked': checked}" @click="toggle">
+        <span></span>
+    </button>
 </template>
 <script lang="ts">
 import { ref } from 'vue'

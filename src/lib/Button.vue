@@ -30,7 +30,8 @@ export default {
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
-$blue: #31588a;
+$blue: #32588a;
+$hover-color:#75a3de;
 $radius: 4px;
 $red: red;
 $grey: grey;
@@ -98,6 +99,11 @@ $grey: grey;
     background: $blue;
     border-color: $blue;
     color: white;
+    &:hover {
+      // background: $blue;
+      // border-color: $blue;
+      opacity: .6;
+    }
     &.gtzui-level-main {
       background: $blue;
       color: white;

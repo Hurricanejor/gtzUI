@@ -58,7 +58,8 @@ $border-color: #d9d9d9;
     padding: 5px 10px;
     background-color: #fff;
     border-radius: 12px;
-    box-shadow: 1px 5px 20px #ebedf0;
+    box-shadow: 1px 5px 20px #d7dfec;
+    // box-shadow: 1px 5px 20px #b9c8de;
   >h2 {
     // font-size: 20px;
     // padding: 8px 16px;

@@ -132,6 +132,7 @@ aside {
         line-height: 40px;
         padding-left: 20px;
         font-size: 14px;
+        transition: background 250ms ease 0s;
         &:hover {
           
         background: rgba(236, 242, 252, .5);
@@ -145,6 +146,7 @@ aside {
         background: rgba(236, 242, 252, .5);
         // padding-left: 16px;
         position: relative;
+        transition: background 250ms ease 0s;
         &::after{
             box-shadow: 1px 0 12px 0$mainColor;
             position: absolute;
