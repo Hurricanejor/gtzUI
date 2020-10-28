@@ -1,5 +1,5 @@
 <template>
-    <button class="gtz-button" :class="{'gtz-checked': checked}" @click="toggle">
+    <button class="gtz-button-switch" :class="{'gtz-checked': checked}" @click="toggle">
         <span></span>
     </button>
 </template>
@@ -27,7 +27,7 @@ $h: 22px;
 $h2: $h - 4px;
 $disbc:  #bfbfbf;
 $combc: #31588a;
-.gtz-button {
+.gtz-button-switch {
   height: $h; width: $h * 2; border: none; background: $disbc; border-radius: $h/2; position: relative;
   > span {
     position: absolute; top: 2px; left: 2px; height: $h2; width: $h2; background: white; border-radius: $h2 / 2; transition: all 250ms;

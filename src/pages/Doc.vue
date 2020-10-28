@@ -137,19 +137,16 @@ aside {
         font-size: 14px;
         transition: background 250ms ease 0s;
         &:hover {
-          
-        background: rgba(236, 242, 252, .5);
-          &::after{
-          }
+          background: rgba(236, 242, 252, .5);
+          color: $mainColor;
         }
       }
       
       > a.router-link-active {
-        color: $mainColor;
         background: rgba(236, 242, 252, .5);
-        // padding-left: 16px;
         position: relative;
         transition: background 250ms ease 0s;
+        color: $mainColor;
         &::after{
             box-shadow: 1px 0 12px 0$mainColor;
             position: absolute;

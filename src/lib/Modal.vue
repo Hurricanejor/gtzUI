@@ -1,9 +1,12 @@
 <template>
-    <div>
+    <div v-if="visiable">
         <div class="gtz-modal-overlay"></div>
         <div class="gtz-modal-wrapper">
             <div class="gtz-modal">
-                <header>标题</header>
+                <header>
+                    标题
+                    <span class="gtz-modal-close" @click="close"></span>
+                </header>
                 <main>
                     <p>第一行字</p>
                     <p>第二行字</p>
@@ -18,9 +21,24 @@
 </template>
 <script lang="ts">
 import Button from "./Button.vue";
+import { ref } from "vue";
 export default {
     components: {
         Button
+    },
+    props: {
+        visiable: {
+            type: Boolean,
+            default: false
+        }
+    },
+    setup(props, content) {
+        const close = () => {
+            content.emit("update:visiable", false);
+        }
+        return {
+            close
+        }
     }
 }
 </script>

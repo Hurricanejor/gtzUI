@@ -1,5 +1,5 @@
 <template>
-   <button class="gtzui-button" :class="classes">
+   <button class="gtz-button" :class="classes">
         <slot></slot>
    </button>
 </template>
@@ -18,8 +18,8 @@ export default {
       const {theme, size} = props;
       const classes = computed(() => {
          return {
-            [`gtzui-theme-${theme}`]: theme,
-            [`gtzui-size-${size}`]: size
+            [`gtz-theme-${theme}`]: theme,
+            [`gtz-size-${size}`]: size
          }
       });
       return { classes };
@@ -35,10 +35,8 @@ $hover-color:#75a3de;
 $radius: 4px;
 $red: red;
 $grey: grey;
-.gtzui-button {
-  // background: $blue;
-  //   border-color: $blue;
-  //   color: white;
+.gtz-button {
+  font-size: 12px;
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
@@ -56,8 +54,7 @@ $grey: grey;
   & + & {
     margin-left: 8px;
   }
-  &:hover,
-  &:focus {
+  &:hover {
     color: $blue;
     border-color: $blue;
   }
@@ -67,16 +64,15 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
-  &.gtzui-theme-link {
+  &.gtz-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
-    &:hover,
-    &:focus {
+    &:hover {
       color: lighten($blue, 10%);
     }
   }
-  &.gtzui-theme-text {
+  &.gtz-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
@@ -85,17 +81,17 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
-  &.gtzui-size-big {
+  &.gtz-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
-  &.gtzui-size-small {
+  &.gtz-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
-  &.gtzui-theme-button {
+  &.gtz-theme-button {
     background: $blue;
     border-color: $blue;
     color: white;
@@ -104,7 +100,7 @@ $grey: grey;
       // border-color: $blue;
       opacity: .6;
     }
-    &.gtzui-level-main {
+    &.gtz-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
@@ -114,7 +110,7 @@ $grey: grey;
         border-color: darken($blue, 10%);
       }
     }
-    &.gtzui-level-danger {
+    &.gtz-level-danger {
       background: $red;
       border-color: $red;
       color: white;
@@ -125,8 +121,8 @@ $grey: grey;
       }
     }
   }
-  &.gtzui-theme-link {
-    &.gtzui-level-danger {
+  &.gtz-theme-link {
+    &.gtz-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -134,15 +130,15 @@ $grey: grey;
       }
     }
   }
-  &.gtzui-theme-text {
-    &.gtzui-level-main {
+  &.gtz-theme-text {
+    &.gtz-level-main {
       color: $blue;
       &:hover,
       &:focus {
         color: darken($blue, 10%);
       }
     }
-    &.gtzui-level-danger {
+    &.gtz-level-danger {
       color: $red;
       &:hover,
       &:focus {
@@ -150,7 +146,7 @@ $grey: grey;
       }
     }
   }
-  &.gtzui-theme-button {
+  &.gtz-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -159,13 +155,13 @@ $grey: grey;
       }
     }
   }
-  &.gtzui-theme-link, &.gtzui-theme-text {
+  &.gtz-theme-link, &.gtz-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
     }
   }
-  > .gtzui-loadingIndicator{
+  > .gtz-loadingIndicator{
     width: 14px;
     height: 14px;
     display: inline-block;
@@ -174,10 +170,10 @@ $grey: grey;
     border-color: $blue $blue $blue transparent;
     border-style: solid;
     border-width: 2px;
-    animation: gtzui-spin 1s infinite linear;
+    animation: gtz-spin 1s infinite linear;
   }
 }
-@keyframes gtzui-spin {
+@keyframes gtz-spin {
   0%{transform: rotate(0deg)} 
   100%{transform: rotate(360deg)} 
 }
