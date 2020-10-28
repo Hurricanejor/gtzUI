@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="markdown-body">
     <h3>Switch 组件示例</h3>
     <Demo :componentName="Switch1Demo"></Demo>
     <Demo :componentName="Switch2Demo"></Demo>
@@ -10,7 +10,6 @@ import { ref } from "vue";
 import Switch1Demo from "./Switch/Switch1.demo.vue";
 import Switch2Demo from "./Switch/Switch2.demo.vue";
 import Demo from "./Demo.vue";
-
 
 export default {
   components: { Demo },

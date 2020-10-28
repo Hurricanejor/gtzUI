@@ -1,23 +1,25 @@
 <template>
-    <div class="demo">
-        <h2>{{componentName.__sourceCodeTitle}}</h2>
-        <div class="demo-component">
-            <component :is="componentName"></component>
-        </div>
-        <div class="demo-actions">
-            <Button @click="codeVisible = !codeVisible">{{ codeVisible ? "隐藏代码" : "查看代码" }}</Button>
-            <Button v-if="codeVisible" @click="">复制代码</Button>
-        </div>
-        <div class="demo-code" v-if="codeVisible">
-            <pre class="line-numbers language-html" v-html="html" />
-         <!--  
-            <pre></pre>  报错      ???
-            只能写成<pre />
-         <pre class="language-html" v-html="Prism.highlight(componentName.__sourceCode, Prism.languages.html, 'html')"></pre>
-         
-          --> 
-        </div>
-    </div>
+      <div>
+        <h4>{{componentName.__sourceCodeTitle}}</h4>
+          <div class="demo">
+              <div class="demo-component">
+                  <component :is="componentName"></component>
+              </div>
+              <div class="demo-actions">
+                  <Button @click="codeVisible = !codeVisible">{{ codeVisible ? "隐藏代码" : "查看代码" }}</Button>
+                  <Button v-if="codeVisible" @click="">复制代码</Button>
+              </div>
+              <div class="demo-code" v-if="codeVisible">
+                  <pre class="line-numbers language-html" v-html="html" />
+              <!--  
+                  <pre></pre>  报错      ???
+                  只能写成<pre />
+              <pre class="language-html" v-html="Prism.highlight(componentName.__sourceCode, Prism.languages.html, 'html')"></pre>
+              
+                --> 
+              </div>
+          </div>
+      </div>
 </template>
 
 <script lang="ts">
@@ -53,13 +55,13 @@ export default {
 $border-color: #d9d9d9;
 .demo {
     margin-bottom: 24px;
-    padding: 10px;
+    padding: 5px 10px;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 1px 5px 20px #ebedf0;
   >h2 {
-    font-size: 20px;
-    padding: 8px 16px;
+    // font-size: 20px;
+    // padding: 8px 16px;
     // border-bottom: 1px solid $border-color;
   }
   &-component {
@@ -67,7 +69,7 @@ $border-color: #d9d9d9;
   }
   &-actions {
     padding: 8px 16px;
-    // border-top: 1px dashed $border-color;
+    border-top: 1px dashed $border-color;
   }
   &-code {
     padding: 8px 16px;
