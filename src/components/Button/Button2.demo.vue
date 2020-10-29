@@ -2,7 +2,7 @@
     按钮尺寸
 </demo>
 <template>
-    <div class="">
+    <div>
         <Button size="big">大型按钮</Button>
         <Button>默认按钮</Button>
         <Button size="small">小型按钮</Button>

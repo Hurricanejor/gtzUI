@@ -1,5 +1,5 @@
 <demo>
-    示例5
+    按钮图标
 </demo>
 <template>
     <Button loading>加载中</Button>

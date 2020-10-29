@@ -12,14 +12,24 @@ export default {
       },
       size: {
          type: String
+      },
+      circle: {
+        type: Boolean,
+        default: false
+      },
+      full: {
+        type: Boolean,
+        default: false
       }
    },
    setup(props) {
-      const {theme, size} = props;
+      const {theme, size, circle, full} = props;
       const classes = computed(() => {
          return {
             [`gtz-theme-${theme}`]: theme,
-            [`gtz-size-${size}`]: size
+            [`gtz-size-${size}`]: size,
+            [`gtz-button-circle`]: circle,
+            [`gtz-button-full`]: full
          }
       });
       return { classes };
@@ -39,7 +49,7 @@ $grey: grey;
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
-  margin-bottom: 5px;
+  margin: 5px;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -51,12 +61,9 @@ $grey: grey;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
-  & + & {
-    margin-left: 8px;
-  }
   &:hover {
     color: #333;
-    border-color: #666666;
+    border-color: #333;
   }
   &:focus {
     outline: none;
@@ -64,13 +71,22 @@ $grey: grey;
   &::-moz-focus-inner {
     border: 0;
   }
+  
+  &.gtz-button-circle {
+    border-radius: 100px;
+  }
+  &.gtz-button-full {
+    width: 100%;
+  }
   &.gtz-theme-text {
-    border-color: transparent;
+    border-color: #f2f2f2;
+    background: #f2f2f2;
     box-shadow: none;
-    color: inherit;
+    color: #333333;
     &:hover,
     &:focus {
-      background: darken(white, 5%);
+      background: #ffffff;
+      border-color: #c5d9e8;
     }
   }
   &.gtz-size-big {

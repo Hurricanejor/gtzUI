@@ -1,10 +1,11 @@
 <demo>
-    示例4
+    按钮铺满
 </demo>
 <template>
-    <Button disabled>禁用按钮</Button>
-    <Button theme="link" disabled>禁用链接按钮</Button>
-    <Button theme="text" disabled>禁用按钮</Button>
+    <Button @click="onClick" full>默认按钮</Button>
+    <Button theme="button" full>主要按钮</Button>
+    <Button theme="text" full>文字按钮</Button>
+    <Button disabled theme="button" full>禁用按钮</Button>
 </template>
 
 <script lang="ts">
