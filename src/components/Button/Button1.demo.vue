@@ -4,9 +4,9 @@
 <template>
     <div>
         <Button @click="onClick">默认按钮</Button>
-        <Button theme="button">你好</Button>
-        <Button theme="link">链接按钮</Button>
+        <Button theme="button">主要按钮</Button>
         <Button theme="text">文字按钮</Button>
+        <Button disabled theme="button">禁用按钮</Button>
     </div>
 </template>
 

@@ -28,7 +28,6 @@ export default {
 </script>
 <style lang="scss">
 $h: 32px;
-$border-color: #d9d9d9;
 $color: #333;
 $blue: #32588a;
 $hover-color:#75a3de;
@@ -40,14 +39,15 @@ $grey: grey;
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
+  margin-bottom: 5px;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   white-space: nowrap;
   background: white;
-  color: $color;
-  border: 1px solid $border-color;
+  color: $blue;
+  border:1px solid $blue;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
@@ -55,22 +55,14 @@ $grey: grey;
     margin-left: 8px;
   }
   &:hover {
-    color: $blue;
-    border-color: $blue;
+    color: #333;
+    border-color: #666666;
   }
   &:focus {
     outline: none;
   }
   &::-moz-focus-inner {
     border: 0;
-  }
-  &.gtz-theme-link {
-    border-color: transparent;
-    box-shadow: none;
-    color: $blue;
-    &:hover {
-      color: lighten($blue, 10%);
-    }
   }
   &.gtz-theme-text {
     border-color: transparent;
@@ -82,8 +74,9 @@ $grey: grey;
     }
   }
   &.gtz-size-big {
-    font-size: 24px;
-    height: 48px;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
     padding: 0 16px;
   }
   &.gtz-size-small {
@@ -121,15 +114,6 @@ $grey: grey;
       }
     }
   }
-  &.gtz-theme-link {
-    &.gtz-level-danger {
-      color: $red;
-      &:hover,
-      &:focus {
-        color: darken($red, 10%);
-      }
-    }
-  }
   &.gtz-theme-text {
     &.gtz-level-main {
       color: $blue;
@@ -149,13 +133,15 @@ $grey: grey;
   &.gtz-theme-button {
     &[disabled] {
       cursor: not-allowed;
-      color: $grey;
+      border: 1px solid #e6e6e6;
+      background-color: #FBFBFB;
+      color: #C9C9C9;
       &:hover {
-        border-color: $grey;
+        opacity: 1;
       }
     }
   }
-  &.gtz-theme-link, &.gtz-theme-text {
+  &.gtz-theme-text {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
