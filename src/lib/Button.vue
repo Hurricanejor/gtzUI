@@ -40,7 +40,7 @@ export default {
 $h: 32px;
 $color: #333;
 $blue: #32588a;
-$hover-color:#75a3de;
+$active-color:#75a3de;
 $radius: 4px;
 $red: red;
 $grey: grey;
@@ -61,7 +61,7 @@ $grey: grey;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
-  &:hover {
+  &:active {
     color: #333;
     border-color: #333;
   }
@@ -83,8 +83,7 @@ $grey: grey;
     background: #f2f2f2;
     box-shadow: none;
     color: #333333;
-    &:hover,
-    &:focus {
+    &:active {
       background: #ffffff;
       border-color: #c5d9e8;
     }
@@ -104,7 +103,7 @@ $grey: grey;
     background: $blue;
     border-color: $blue;
     color: white;
-    &:hover {
+    &:active {
       // background: $blue;
       // border-color: $blue;
       opacity: .6;
@@ -113,7 +112,7 @@ $grey: grey;
       background: $blue;
       color: white;
       border-color: $blue;
-      &:hover,
+      &:active,
       &:focus {
         background: darken($blue, 10%);
         border-color: darken($blue, 10%);
@@ -123,7 +122,7 @@ $grey: grey;
       background: $red;
       border-color: $red;
       color: white;
-      &:hover,
+      &:active,
       &:focus {
         background: darken($red, 10%);
         border-color: darken($red, 10%);
@@ -133,14 +132,14 @@ $grey: grey;
   &.gtz-theme-text {
     &.gtz-level-main {
       color: $blue;
-      &:hover,
+      &:active,
       &:focus {
         color: darken($blue, 10%);
       }
     }
     &.gtz-level-danger {
       color: $red;
-      &:hover,
+      &:active,
       &:focus {
         color: darken($red, 10%);
       }
@@ -152,7 +151,7 @@ $grey: grey;
       border: 1px solid #e6e6e6;
       background-color: #FBFBFB;
       color: #C9C9C9;
-      &:hover {
+      &:active {
         opacity: 1;
       }
     }
