@@ -2,7 +2,14 @@
     <div>
         Modal组件
         <Button @click="toggleModal">Toggle</Button>
-        <Modal v-model:visiable="x" :ok="fn1" :no="fn2" :closeOnOverlay="false"></Modal>
+        <Modal v-model:visiable="x" :ok="fn1" :no="fn2" :closeOnOverlay="false">
+            <template v-slot:title>
+                <strong>标题名称</strong>
+            </template>
+            <template v-slot:content>
+                <p>内容内容内容内容内容内容内容内容内容内容内容</p>
+            </template>
+        </Modal>
     </div>
 </template>
 <script lang="ts">

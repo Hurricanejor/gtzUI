@@ -4,12 +4,11 @@
         <div class="gtz-modal-wrapper">
             <div class="gtz-modal">
                 <header>
-                    标题
+                    <slot name="title"></slot>
                     <span class="gtz-modal-close" @click="close"></span>
                 </header>
                 <main>
-                    <p>第一行字</p>
-                    <p>第二行字</p>
+                    <slot name="content"></slot>
                 </main>
                 <footer>
                     <Button @click="ok" theme="button">确定</Button>
