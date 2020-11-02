@@ -1,5 +1,6 @@
 <template>
    <button class="gtz-button" :class="classes">
+        <span v-if="loading" class="gtz-button-loading"></span>
         <slot></slot>
    </button>
 </template>
@@ -18,6 +19,10 @@ export default {
         default: false
       },
       full: {
+        type: Boolean,
+        default: false
+      },
+      loading: {
         type: Boolean,
         default: false
       }
@@ -45,6 +50,7 @@ $radius: 4px;
 $red: red;
 $grey: grey;
 .gtz-button {
+  vertical-align: top;
   font-size: 12px;
   box-sizing: border-box;
   height: $h;
@@ -162,7 +168,7 @@ $grey: grey;
       color: $grey;
     }
   }
-  > .gtz-loadingIndicator{
+  >.gtz-button-loading {
     width: 14px;
     height: 14px;
     display: inline-block;
