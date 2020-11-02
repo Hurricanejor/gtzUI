@@ -50,7 +50,7 @@ $radius: 4px;
 $red: red;
 $grey: grey;
 .gtz-button {
-  vertical-align: top;
+  vertical-align: middle;
   font-size: 12px;
   box-sizing: border-box;
   height: $h;

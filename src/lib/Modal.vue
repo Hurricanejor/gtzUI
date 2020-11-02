@@ -1,6 +1,6 @@
 <template>
     <div v-if="visiable">
-        <div class="gtz-modal-overlay"></div>
+        <div class="gtz-modal-overlay" @click="isCloseOnOverlay"></div>
         <div class="gtz-modal-wrapper">
             <div class="gtz-modal">
                 <header>
@@ -12,8 +12,8 @@
                     <p>第二行字</p>
                 </main>
                 <footer>
-                    <Button theme="button">确定</Button>
-                    <Button>取消</Button>
+                    <Button @click="ok" theme="button">确定</Button>
+                    <Button @click="no">取消</Button>
                 </footer>
             </div>
         </div>
@@ -30,14 +30,40 @@ export default {
         visiable: {
             type: Boolean,
             default: false
+        },
+        closeOnOverlay: {
+          type: Boolean,
+          default: true
+        },
+        ok: {
+          type: Function
+        },
+        no: {
+          type: Function
         }
     },
     setup(props, content) {
         const close = () => {
             content.emit("update:visiable", false);
         }
+        const isCloseOnOverlay = () => {
+          if(props.closeOnOverlay) {
+            close()
+          }
+        }
+        const ok = () => {
+          if(props.ok && props.ok() !== false){
+            close()
+          }
+        }
+        const no = () => {
+          close()
+        }
         return {
-            close
+            close,
+            isCloseOnOverlay,
+            ok,
+            no
         }
     }
 }
