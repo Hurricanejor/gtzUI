@@ -1,5 +1,6 @@
 <template>
-    <div v-if="visiable">
+    <Teleport to="body">
+      <div v-if="visiable">
         <div class="gtz-modal-overlay" @click="isCloseOnOverlay"></div>
         <div class="gtz-modal-wrapper">
             <div class="gtz-modal">
@@ -16,7 +17,8 @@
                 </footer>
             </div>
         </div>
-    </div>
+      </div>
+    </Teleport>
 </template>
 <script lang="ts">
 import Button from "./Button.vue";

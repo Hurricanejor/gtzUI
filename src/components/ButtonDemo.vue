@@ -7,6 +7,7 @@
     <Demo :componentName="Button3Demo"></Demo>
     <Demo :componentName="Button4Demo"></Demo>
     <Demo :componentName="Button5Demo"></Demo>
+    <Demo :componentName="ButtonAttr" :isTable="true"></Demo>
   </div>
 </template>
 <script lang="ts">
@@ -17,10 +18,11 @@ import Button2Demo from "./Button/Button2.demo.vue";
 import Button3Demo from "./Button/Button3.demo.vue";
 import Button4Demo from "./Button/Button4.demo.vue";
 import Button5Demo from "./Button/Button5.demo.vue";
+import ButtonAttr from "./Button/ButtonAttr.md.vue";
 export default {
   components: { Demo },
   setup() {
-    return { Button1Demo,Button2Demo,Button3Demo,Button4Demo,Button5Demo }
+    return { Button1Demo,Button2Demo,Button3Demo,Button4Demo,Button5Demo,ButtonAttr }
   },
 };
 </script>

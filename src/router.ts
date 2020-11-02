@@ -36,5 +36,5 @@ export const router = createRouter({
     ]
 });
 router.afterEach(() => {
-    // console.log("切换路由")
+    console.log(intro)
 });

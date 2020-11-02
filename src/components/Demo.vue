@@ -5,12 +5,12 @@
               <div class="demo-component">
                   <component :is="componentName"></component>
               </div>
-              <div class="demo-actions">
+              <div class="demo-actions" v-if="!isTable">
                   <Button @click="codeVisible = !codeVisible">{{ codeVisible ? "隐藏代码" : "查看代码" }}</Button>
                   <Button v-if="codeVisible" @click="copyCode">复制代码</Button>
               </div>
               <div class="demo-code" v-if="codeVisible">
-                  <pre class="line-numbers language-html" v-html="html" />
+                  <pre class="language-html" v-html="html" />
               <!--  
                   <pre></pre>  报错      ???
                   只能写成<pre />
@@ -33,7 +33,11 @@ const Prism = (window as any).Prism;
 export default {
     components: { Button },
     props: {
-        componentName: Object
+        componentName: Object,
+        isTable: {
+          type: Boolean,
+          default: false
+        }
     },
     setup(props) {
         const html = computed(() => { 
