@@ -5,7 +5,7 @@
     <div>
         <div class="gtz-button-demo">
             <Button size="big">大型按钮</Button>
-            <Button>默认按钮</Button>
+            <Button size="normal">默认按钮</Button>
             <Button size="small">小型按钮</Button>
         </div>
         <div class="gtz-button-demo">

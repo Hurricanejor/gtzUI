@@ -8,6 +8,7 @@
     <Demo :componentName="Button4Demo"></Demo>
     <Demo :componentName="Button5Demo"></Demo>
     <Demo :componentName="ButtonAttr" :isTable="true"></Demo>
+    <Demo :componentName="ButtonEvent" :isTable="true"></Demo>
   </div>
 </template>
 <script lang="ts">
@@ -19,10 +20,11 @@ import Button3Demo from "./Button/Button3.demo.vue";
 import Button4Demo from "./Button/Button4.demo.vue";
 import Button5Demo from "./Button/Button5.demo.vue";
 import ButtonAttr from "./Button/ButtonAttr.md.vue";
+import ButtonEvent from "./Button/ButtonEvent.md.vue";
 export default {
   components: { Demo },
   setup() {
-    return { Button1Demo,Button2Demo,Button3Demo,Button4Demo,Button5Demo,ButtonAttr }
+    return { Button1Demo,Button2Demo,Button3Demo,Button4Demo,Button5Demo,ButtonAttr,ButtonEvent }
   },
 };
 </script>

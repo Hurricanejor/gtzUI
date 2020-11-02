@@ -1,7 +1,7 @@
 <template>
       <div>
         <h4>{{componentName.__sourceCodeTitle}}</h4>
-          <div class="demo">
+          <div :class=" !isTable ? 'demo' : ''">
               <div class="demo-component">
                   <component :is="componentName"></component>
               </div>
@@ -56,7 +56,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $border-color: #d9d9d9;
 .demo {
     margin-bottom: 24px;
@@ -87,4 +87,25 @@ $border-color: #d9d9d9;
     }
   }
 }
+.markdown-body {
+  & table{
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+    & td,
+    & th{
+      font-size: 14px;
+    }
+  }
+}
+// table th:first-of-type {
+//     width: 20%;
+// }
+// table th:nth-of-type(2) {
+//     width: 30%;
+// }
+// table th:nth-of-type(3) {
+//     width: 50%;
+// }
 </style>

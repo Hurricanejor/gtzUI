@@ -1,5 +1,5 @@
 <demo>
-Attributes
+Events
 </demo>
 <template>
     <div class="markdown-body" v-html="buttonEvent"></div>
