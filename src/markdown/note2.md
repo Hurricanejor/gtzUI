@@ -2,7 +2,7 @@
 
 父子组件传值形成闭环
 
-```html
+```
 <!-- 子组件 -->
 <switch :value="bool" @input="{{ bool=$emit }}">
 ```
@@ -15,7 +15,7 @@
 - 点击确认和取消按钮时，需要关闭
 
 
-``` html
+``` 
 <!-- 子组件 -->
 <div v-if="isShow">
     <span class="close" @click="close"></span>
@@ -42,7 +42,7 @@ export default {
 </script>
 ```
 
-```html
+```
 <!-- 父组件 -->
 <!-- 这里不是很明白为什么  x = $event -->
 <CompentsName :isShow="x" @update:property=" x = $event"></CompentsName>

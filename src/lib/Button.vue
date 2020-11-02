@@ -49,7 +49,7 @@ $grey: grey;
   box-sizing: border-box;
   height: $h;
   padding: 0 12px;
-  margin: 5px;
+  margin: 0 5px 5px 0;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -173,6 +173,10 @@ $grey: grey;
     border-width: 2px;
     animation: gtz-spin 1s infinite linear;
   }
+}
+.gtz-button-demo {
+  display: inline-block;
+  margin: 0 10px 0 0;
 }
 @keyframes gtz-spin {
   0%{transform: rotate(0deg)} 

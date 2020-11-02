@@ -24,7 +24,8 @@ export const router = createRouter({
                 {path: "modal", component: ModalDemo},
                 {path: "intro", component: md("intro") },
                 {path: "install", component: md("install") },
-                {path: "note1", component: md("note1") }
+                {path: "note1", component: md("note1") },
+                {path: "note2", component: md("note2") }
             ]
         }
     ]

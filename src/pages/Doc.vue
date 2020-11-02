@@ -29,6 +29,9 @@
                 <li>
                     <router-link @click="phoneToggleMenu" to="/doc/note1">项目搭建</router-link>
                 </li>
+                <li>
+                    <router-link @click="phoneToggleMenu" to="/doc/note2">文档2</router-link>
+                </li>
             </ol>
         </aside>
         <main class="markdown-body">
